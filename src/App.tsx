@@ -1,9 +1,18 @@
+import { ThemeProvider } from "styled-components"
+import { Transactions } from "./pages/Transactions"
+import { GlobalStyle } from "./styles/global"
+import { defaultTheme } from "./styles/themes/default"
 
-function App() {
+
+export function App() {
 
   return (
-    <h1>OI</h1>
+
+    <ThemeProvider theme={defaultTheme}>
+      <GlobalStyle/>
+      <Transactions/>
+    </ThemeProvider>
+
   )
 }
 
-export default App

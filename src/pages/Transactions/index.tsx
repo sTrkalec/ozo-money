@@ -1,43 +1,61 @@
-import { Header } from "../../components/Header";
-import { Summary } from "../../components/Summary";
-import { SearchForm } from "./components/SearchForm";
-import { PriceHighlight, TransactionsContainer, TransactionsTable } from "./styles";
+import { Trash } from 'phosphor-react'
+import { useContext, useEffect, useState } from 'react'
+import { Header } from '../../components/Header'
+import { Summary } from '../../components/Summary'
+import { TransactionContext } from '../../contexts/TransactionsContext'
+import { dateFormatter, priceFormatter } from '../../utils/formatter'
+import { SearchForm } from './components/SearchForm'
+import {
+  PriceHighlight,
+  RemoveTransaction,
+  TransactionsContainer,
+  TransactionsTable,
+} from './styles'
 
 export function Transactions() {
-    return (
-        <div>
-            <Header />
-            <Summary />
+  const { transactions, removeTransactions } = useContext(TransactionContext)
 
-            <TransactionsContainer>
+  async function handleRemoveTransiton(data: any) {
+    await removeTransactions(data)
+  }
 
-                <SearchForm/>
+  return (
+    <div>
+      <Header />
+      <Summary />
 
+      <TransactionsContainer>
+        <SearchForm />
 
-                <TransactionsTable>
-                    <tr>
-                        <td width="50%">Desenvolvimento de site</td>
-                        <td>
-                            <PriceHighlight variant="outcome">
-                                - R$ 12.000,00
-                            </PriceHighlight>
-                        </td>
-                        <td>Venda</td>
-                        <td>11/02/23</td>
-                    </tr>
-                    <tr>
-                        <td width="50%">Desenvolvimento de site</td>
-                        <td>
-                            <PriceHighlight variant="income">
-                                R$ 12.000,00
-                            </PriceHighlight>
-                        </td>
-                        <td>Venda</td>
-                        <td>11/02/23</td>
-                    </tr>
-                </TransactionsTable>
-            </TransactionsContainer>
-
-        </div>
-    )
+        <TransactionsTable>
+          <tbody>
+            {transactions.map((transaction) => {
+              return (
+                <tr key={transaction.id}>
+                  <td width="50%">{transaction.description}</td>
+                  <td>
+                    <PriceHighlight variant={transaction.type}>
+                      {transaction.type == 'outcome' && '- '}
+                      {priceFormatter.format(transaction.price)}
+                    </PriceHighlight>
+                  </td>
+                  <td>{transaction.category}</td>
+                  <td>
+                    {dateFormatter.format(new Date(transaction.createdAt))}
+                  </td>
+                  <td>
+                    <RemoveTransaction
+                      onClick={() => handleRemoveTransiton(transaction.id)}
+                    >
+                      <Trash size={24} />
+                    </RemoveTransaction>
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </TransactionsTable>
+      </TransactionsContainer>
+    </div>
+  )
 }

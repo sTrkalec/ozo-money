@@ -4,6 +4,8 @@ export const SearchFormContainer = styled.form`
   display: flex;
   gap: 1rem;
 
+
+
   input {
     flex: 1;
     border-radius: 6px;
@@ -11,10 +13,14 @@ export const SearchFormContainer = styled.form`
     background: ${(props) => props.theme['gray-900']};
     color: ${(props) => props.theme['gray-300']};
     padding: 1rem;
-
+    
+    @media only screen and (max-width: 780px)  {
+      width: 2rem;
+    }
     &::placeholder {
       color: ${(props) => props.theme['gray-500']};
     }
+
   }
 
   button {
@@ -41,6 +47,12 @@ export const SearchFormContainer = styled.form`
       border-color: ${(props) => props.theme['green-500']};
       color: ${(props) => props.theme.white};
       transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    @media only screen and (max-width: 780px)  {
+      gap: 0;
+      padding: 0rem;
+      font-size: 16px;
     }
   }
 `

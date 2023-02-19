@@ -1,3 +1,32 @@
 {
-  "transactions": []
+  "transactions": [
+    {
+      "description": "erwrwr",
+      "data": {
+        "description": "erwrwr",
+        "price": 3424,
+        "cartegory": "324234",
+        "type": "income"
+      },
+      "price": 3424,
+      "cartegory": "324234",
+      "type": "income",
+      "createdAt": "2023-02-19T04:49:02.164Z",
+      "id": 1
+    },
+    {
+      "description": "wew",
+      "data": {
+        "description": "wew",
+        "price": 23,
+        "cartegory": "23123",
+        "type": "outcome"
+      },
+      "price": 23,
+      "cartegory": "23123",
+      "type": "outcome",
+      "createdAt": "2023-02-19T04:56:19.558Z",
+      "id": 2
+    }
+  ]
 }

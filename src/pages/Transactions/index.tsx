@@ -9,6 +9,7 @@ import {
   PriceHighlight,
   RemoveTransaction,
   TransactionsContainer,
+  TransactionsDiv,
   TransactionsTable,
 } from './styles'
 
@@ -27,34 +28,36 @@ export function Transactions() {
       <TransactionsContainer>
         <SearchForm />
 
-        <TransactionsTable>
-          <tbody>
-            {transactions.map((transaction) => {
-              return (
-                <tr key={transaction.id}>
-                  <td width="50%">{transaction.description}</td>
-                  <td>
-                    <PriceHighlight variant={transaction.type}>
-                      {transaction.type == 'outcome' && '- '}
-                      {priceFormatter.format(transaction.price)}
-                    </PriceHighlight>
-                  </td>
-                  <td>{transaction.category}</td>
-                  <td>
-                    {dateFormatter.format(new Date(transaction.createdAt))}
-                  </td>
-                  <td>
-                    <RemoveTransaction
-                      onClick={() => handleRemoveTransiton(transaction.id)}
-                    >
-                      <Trash size={24} />
-                    </RemoveTransaction>
-                  </td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </TransactionsTable>
+        <TransactionsDiv>
+          <TransactionsTable>
+            <tbody>
+              {transactions.map((transaction) => {
+                return (
+                  <tr key={transaction.id}>
+                    <td width="50%">{transaction.description}</td>
+                    <td>
+                      <PriceHighlight variant={transaction.type}>
+                        {transaction.type == 'outcome' && '- '}
+                        {priceFormatter.format(transaction.price)}
+                      </PriceHighlight>
+                    </td>
+                    <td>{transaction.category}</td>
+                    <td>
+                      {dateFormatter.format(new Date(transaction.createdAt))}
+                    </td>
+                    <td>
+                      <RemoveTransaction
+                        onClick={() => handleRemoveTransiton(transaction.id)}
+                      >
+                        <Trash size={24} />
+                      </RemoveTransaction>
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </TransactionsTable>
+        </TransactionsDiv>
       </TransactionsContainer>
     </div>
   )

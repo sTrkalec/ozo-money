@@ -1,3 +1,4 @@
+import { Student } from 'phosphor-react'
 import styled from 'styled-components'
 
 export const TransactionsContainer = styled.main`
@@ -26,6 +27,13 @@ export const TransactionsTable = styled.table`
       border-bottom-left-radius: 6px;
     }
   }
+`
+
+export const TransactionsDiv = styled.div`
+      @media only screen and (max-width: 635px)  {
+        overflow: auto;
+      }
+
 `
 
 interface PriceHighlightProps {

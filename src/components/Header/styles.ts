@@ -25,6 +25,7 @@ export const NewTransactionButton = styled.button`
   padding: 0 1.25rem;
   border-radius: 6px;
   cursor: pointer;
+  margin-left: 0.5rem;
 
   &:hover {
     transition: background-color 0.3s;
@@ -33,6 +34,5 @@ export const NewTransactionButton = styled.button`
 
   @media only screen and (max-width: 780px)  {
     padding: 0 1rem;
-    width: 6rem;
   }
 `

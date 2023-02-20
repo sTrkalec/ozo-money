@@ -40,6 +40,7 @@ export function Login() {
             navigate("/home")
             console.log(response)
         } catch (error) {
+            alert("Usuário não cadastrado")
             console.log(error)
         }
 

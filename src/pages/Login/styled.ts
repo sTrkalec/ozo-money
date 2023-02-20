@@ -8,10 +8,16 @@ export const HeaderLogin = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 5rem;
-    
     img{
         width: 300px;
-        height: 300px;
+   height: 300px;
+    }
+    @media only screen and (max-width: 780px)  {
+      img{
+        width:150px;
+        height: 100px;
+
+      }
     }
 `
 export const MainLogin = styled.main`
@@ -81,7 +87,7 @@ export const LoginDivision = styled.div`
 `
 
 export const LoginMainContainer = styled.div`
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     flex-direction: column;

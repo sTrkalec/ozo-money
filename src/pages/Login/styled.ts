@@ -10,7 +10,7 @@ export const HeaderLogin = styled.div`
     margin-top: 5rem;
     img{
         width: 300px;
-   height: 300px;
+        height: 300px;
     }
     @media only screen and (max-width: 780px)  {
       img{
@@ -88,6 +88,7 @@ export const LoginDivision = styled.div`
 
 export const LoginMainContainer = styled.div`
     height: 90vh;
+    
     display: flex;
     align-items: center;
     flex-direction: column;

@@ -9,8 +9,8 @@ export const HeaderLogin = styled.div`
     justify-content: center;
     margin-top: 5rem;
     img{
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
     }
     @media only screen and (max-width: 780px)  {
       img{

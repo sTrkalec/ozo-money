@@ -87,12 +87,12 @@ export const LoginDivision = styled.div`
 `
 
 export const LoginMainContainer = styled.div`
-    height: 95vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
-    position:absolute;
-    overflow-x: hidden;
+    position:fixed;
+    overflow: hidden;
     flex-direction: column;
     justify-content: space-between;
 `

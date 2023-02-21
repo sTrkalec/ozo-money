@@ -20,6 +20,8 @@ export function Transactions() {
     await removeTransactions(data)
   }
 
+  console.log(transactions)
+
   return (
     <div>
       <Header />
@@ -33,14 +35,14 @@ export function Transactions() {
               {transactions.map((transaction) => {
                 return (
                   <tr key={transaction.id}>
-                    <td width="50%">{transaction.description}</td>
+                    <td >{transaction.description}</td>
                     <td>
                       <PriceHighlight variant={transaction.type}>
                       
                         {priceFormatter.format(transaction.price)}
                       </PriceHighlight>
                     </td>
-                    <td>{transaction.category}</td>
+                    <td>{transaction.cartegory}</td>
                     <td>
                       {dateFormatter.format(new Date(transaction.createdAt))}
                     </td>

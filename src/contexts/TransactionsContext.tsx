@@ -7,13 +7,13 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { async } from '@firebase/util'
 
 interface Transaction {
+  cartegory: string
   income: number
   total: number
   id: number
   description: string
   type: 'income' | 'outcome'
   price: number
-  category: string
   createdAt: string
 }
 

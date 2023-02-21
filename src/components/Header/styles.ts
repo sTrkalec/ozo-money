@@ -16,6 +16,11 @@ export const HeaderContent = styled.div`
   align-items: center;
 `
 
+export const DivisionButtonDin = styled.div`
+display: flex;
+`
+
+
 export const NewTransactionButton = styled.button`
   height: 50px;
   border: 0;
@@ -34,5 +39,9 @@ export const NewTransactionButton = styled.button`
 
   @media only screen and (max-width: 780px)  {
     padding: 0 1rem;
+  }
+  @media only screen and (max-width: 500px)  {
+    padding: 0.2rem;
+    height: 30px
   }
 `

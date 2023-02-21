@@ -1,4 +1,4 @@
-import { HeaderContainer, HeaderContent, NewTransactionButton } from './styles'
+import { DivisionButtonDin, HeaderContainer, HeaderContent, NewTransactionButton } from './styles'
 import {
   Plus,
   SignOut
@@ -20,15 +20,15 @@ export function Header() {
       <HeaderContent>
         <img src={LogoImg} alt="" />
 
-        <div>
-        <Dialog.Root>
-          <Dialog.Trigger asChild>
-            <NewTransactionButton><Plus size={24}/></NewTransactionButton>
-          </Dialog.Trigger>
-          <NewTransactionButton onClick={logout}><SignOut size={24}/></NewTransactionButton>
-          <NewTransactionsModal/>
-        </Dialog.Root>
-        </div>
+        <DivisionButtonDin>
+          <Dialog.Root>
+            <Dialog.Trigger asChild>
+              <NewTransactionButton><Plus size={24} /></NewTransactionButton>
+            </Dialog.Trigger>
+            <NewTransactionButton onClick={logout}><SignOut size={24} /></NewTransactionButton>
+            <NewTransactionsModal />
+          </Dialog.Root>
+        </DivisionButtonDin>
       </HeaderContent>
     </HeaderContainer>
   )

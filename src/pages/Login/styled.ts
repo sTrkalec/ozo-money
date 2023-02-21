@@ -22,9 +22,6 @@ export const HeaderLogin = styled.div`
         margin-top: 0rem;
     }
 `
-export const MainLogin = styled.main`
-`
-
 export const LoginFormContainer = styled.form`
     display: flex;
     align-items: center;

@@ -27,6 +27,10 @@ export const TransactionsTable = styled.table`
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
     }
+
+    @media only screen and (max-width: 500px)  {
+      padding: 1.25rem 1rem;
+    }
   }
 `
 

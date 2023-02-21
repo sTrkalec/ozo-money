@@ -16,8 +16,10 @@ export const HeaderLogin = styled.div`
       img{
         width:150px;
         height: 100px;
-
       }
+    }
+    @media only screen and (max-width: 320px)  {
+        margin-top: 0rem;
     }
 `
 export const MainLogin = styled.main`

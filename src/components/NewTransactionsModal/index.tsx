@@ -70,9 +70,10 @@ export function NewTransactionsModal() {
           />
           <input
             type="number"
+            step={"any"}
             placeholder="Preço"
             required
-            {...register('price', { valueAsNumber: true })}
+            {...register('price', { valueAsNumber: true,  })}
           />
           <input
             type="text"

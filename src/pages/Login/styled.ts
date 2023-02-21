@@ -91,7 +91,7 @@ export const LoginMainContainer = styled.div`
     
     display: flex;
     align-items: center;
-    position: fixed;
+    position:absolute;
     overflow-x: hidden;
     flex-direction: column;
     justify-content: space-between;

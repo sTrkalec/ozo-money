@@ -87,8 +87,8 @@ export const LoginDivision = styled.div`
 `
 
 export const LoginMainContainer = styled.div`
-    height: 90vh;
-    
+    height: 95vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     position:absolute;
